@@ -69,7 +69,7 @@ console.log(product)
 
 // When the whole TypedObject is inspected directly however, we only see
 // the internal getters and setters of the object. In these cases, we can use the
-// TypedObject's "toObject" method to output a normal object literal:
+// TypedObject's "toObject" method to output an object literal containing all data:
 
 console.log(product.toObject());
 
