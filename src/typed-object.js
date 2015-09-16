@@ -38,6 +38,14 @@
 
                 switch (type) {
                     case 'object':
+                        if (typeof value !== 'object') {
+                            if (typeof obj[key].length !== 'undefined') {
+                                err(key, 'array', typeof value);
+                            } else {
+                                err(key, 'object', typeof value);
+                            }
+                        }
+                        
                         if (
                             typeof obj[key].length !== 'undefined' &&
                             typeof value.length === 'undefined'
