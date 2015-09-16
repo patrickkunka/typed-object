@@ -77,7 +77,7 @@ var product = new TypedObject({
     buy: function() { ... }
 });
 
-// Uncaught TypeError: Can't define method <TypedObject>.buy, methods are not permitted on TypedObjects
+// Uncaught TypeError: Can't define method <TypedObject>.buy, methods are not permitted on typed objects
 ```
 
 ### Full Data Retrieval 
