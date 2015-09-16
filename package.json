@@ -1,0 +1,18 @@
+{
+  "name": "typed-object",
+  "author": "KunkaLabs",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kunkalabs/typed-object.git"
+  },
+  "version": "0.0.0",
+  "description": "Creates strict, strongly-typed ES5-compatible JavaScript objects.",
+  "devDependencies": {
+    "gulp": "^3.8.8",
+    "gulp-jscs": "^1.5.1",
+    "gulp-jshint": "^1.8.5",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-uglify": "~1.0.1",
+    "jshint-stylish": "~1.0.0"
+  }
+}
