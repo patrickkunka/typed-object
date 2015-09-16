@@ -54,11 +54,11 @@ Because the inner workings of a TypedObject hide the internal properties for saf
 
 ```js
 
-console.log(product.price) // 9.99
+console.log(product.price); // 9.99
 
 // Individual properties may be accessed as normal.
 
-console.log(product)
+console.log(product);
 
 // {
 //   price (...)
