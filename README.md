@@ -48,7 +48,7 @@ product.discount    = '0.5'; // Uncaught TypeError: Can't add property discount,
 
 ## Data Retrieval 
 
-While data may be retrieved from individual properties via ES5 getters as shown in the above example, we may want to to inspect the object as a whole for debugging.
+While data may be retrieved from individual properties via ES5 getters as shown in the above example, we may want to inspect the object as a whole for debugging.
 
 Because the inner workings of a TypedObject hide the internal properties for safety, console.logging the object will not expose its data. For these cases, we can use the built-in `toObject` method, which will return a new object literal containing the TypedObject's data.
 
