@@ -60,7 +60,7 @@ Additonally, if properties are extended onto the object that are not defined in 
 product.discount    = '0.5'; // Uncaught TypeError: Can't add property discount, object is not extensible
 ```
 
-As TypedObjects are designed for lightweight, temporary data storage and transport, they do not accept methods/function assignments by design, and a TypeError will be thrown if any methods are included in the schema. Typically a more robust Constructor/Prototype pattern is ES6 class would be better in these situations.
+As TypedObjects are designed for lightweight, temporary data storage and transport, they do not accept methods/function assignments by design, and a TypeError will be thrown if any methods are included in the schema. A more robust constructor/prototype pattern or ES6 class would be better in these situations.
 
 ```js
 // Example bad definition:
