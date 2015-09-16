@@ -2,7 +2,7 @@
 
 Create strict, strongly-typed JavaScript objects
 
-Object literials often just don't cut it for large scale JavaScript applications, and during development we may want the peace of mind that comes with strongly-typed languages, whether we're simply trying to catch typos or exposing public APIs and module interfaces.
+Object literials often just don't cut it for large scale JavaScript applications, and during development we may want the peace of mind that comes with strongly-typed languages, whether we're simply trying to catch typos or creatomg public APIs and interfaces.
 
 Thankfully, various lesser-known native features already exist to provide us with the ability to create much stricter constructs within vanilla ES5 JavaScript, without having to resort to higher-level abstractions such as TypeScript.
 
