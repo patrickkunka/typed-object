@@ -10,6 +10,8 @@ The `TypedObject` constructor uses these features to effortlessly generate stric
 
 ## Examples
 
+### Instantiation with Schema Definition
+
 ```js
 'use strict';
 
@@ -27,6 +29,8 @@ var product = new TypedObject({
 ```
 
 We recommend setting typical "falsy"/empty values as defaults to typecast the object's properties while creating a visual schema. However, properties can be set to any value by default.
+
+### Property Assignment
 
 Once the TypedObject has been instantiated, its properties may be set as normal:
 
@@ -52,6 +56,8 @@ product.images      = new Image() // Uncaught TypeError: Can't set property <Typ
 product.isOwned     = 'TRUE'; // Uncaught TypeError: Can't set property <TypedObject>.isOwned, type "string" is not assignable to type "boolean"
 ```
 
+### Non-extensibility
+
 Additonally, if properties are extended onto the object that are not defined in the initial schema, a TypeError will also be thrown (if we are in ES5 "strict mode"):
 
 ```js
@@ -59,6 +65,8 @@ Additonally, if properties are extended onto the object that are not defined in 
 
 product.discount    = '0.5'; // Uncaught TypeError: Can't add property discount, object is not extensible
 ```
+
+### Methods
 
 As TypedObjects are designed for lightweight, temporary data storage and transport, they do not accept methods/function assignments by design, and a TypeError will be thrown if any methods are included in the schema. A more robust constructor/prototype pattern or ES6 class would be better in these situations.
 
@@ -72,7 +80,7 @@ var product = new TypedObject({
 // Uncaught TypeError: Can't define method <TypedObject>.buy, methods are not permitted on TypedObjects
 ```
 
-## Data Retrieval 
+### Full Data Retrieval 
 
 While data may be retrieved from individual properties via ES5 getters as shown in the above example, we may want to inspect the object as a whole for debugging.
 
