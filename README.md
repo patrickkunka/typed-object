@@ -6,7 +6,7 @@ Object literials often just don't cut it for large scale JavaScript applications
 
 Thankfully, various lesser-known native features already exist to provide us with the ability to create much stricter constructs within vanilla ES5 JavaScript, without having to resort to higher-level abstractions such as TypeScript.
 
-The *TypedObject* constructor uses these features to effortlessly generate strict objects, ideal for data storage and transport within large scale client-side or server-side applications.
+The *TypedObject* constructor uses these features to effortlessly generate strict, strongly-typed objects, ideal for data storage and transport within large scale client-side or server-side applications.
 
 ## Example
 
