@@ -24,7 +24,13 @@ var product = new TypedObject({
     images: [],
     isOwned: false
 });
+```
 
+We recommend setting typical "falsy"/empty values as defaults to typecast the object's properties while creating a visual schema. However, properties can be set to any value by default.
+
+Once the TypedObject has been instantiated, its properties may be set as normal:
+
+```js
 // Example good assignments:
 
 product.price       = 9.99; // OK
@@ -34,25 +40,32 @@ product.isOwned     = true; // OK
 console.log(product.price) // 9.99
 console.log(product.currency) // 'USD'
 console.log(product.isOwned) // true
+```
 
+The fun starts when a property is badly assigned as a TypeError will be thrown:
+
+```js
 // Example bad assignments:
 
 product.price       = '$9.99' // Uncaught TypeError: Can't set property <TypedObject>.price, type "string" is not assignable to type "number"
 product.images      = new Image() // Uncaught TypeError: Can't set property <TypedObject>.images, type "object" is not assignable to type "array"
 product.isOwned     = 'TRUE'; // Uncaught TypeError: Can't set property <TypedObject>.isOwned, type "string" is not assignable to type "boolean"
+```
 
+Additonally, if properties are extended onto the object that are not defined in the initial schema, a TypeError will also be thrown (if we are in ES5 "strict mode"):
+
+```js
 // Example bad extension:
 
 product.discount    = '0.5'; // Uncaught TypeError: Can't add property discount, object is not extensible
+```
 
+As TypedObjects are designed for lightweight, temporary data storage and transport, they do not accept methods/function assignments by design, and a TypeError will be thrown if any methods are included in the schema. Typically a more robust Constructor/Prototype pattern is ES6 class would be better in these situations.
+
+```js
 // Example bad definition:
 
 var product = new TypedObject({
-    price: -1,
-    currency: '',
-    name: '',
-    images: [],
-    isOwned: false,
     buy: function() { ... }
 });
 
