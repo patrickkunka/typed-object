@@ -95,8 +95,8 @@ console.log(product.toObject());
 // }
 ```
 
-## Support
+## Compatibility
 
-TypedObjects are compatible with any ES5 implementation. On the client-side, that means IE9 and up, and all other major browsers.
+TypedObjects are compatible with any ES5 implementation. That means IE9 and up, plus all other major browsers, and all server-side JavaScript implementations.
 
 Module support for AMD and CommonJS is included, as well as the ability to load the TypedObject class as a global variable via a script tag.
