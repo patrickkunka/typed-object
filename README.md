@@ -28,7 +28,7 @@ var product = new TypedObject({
 });
 ```
 
-We recommend setting typical "falsy"/empty values as defaults to typecast the object's properties while creating a visual schema. However, properties can be set to any value by default.
+We recommend setting typical "falsy"/empty values as defaults to typecast the object's properties while creating a visual schema. However, properties may be set to any value by default.
 
 ### Property Assignment
 
