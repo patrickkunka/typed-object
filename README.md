@@ -8,7 +8,7 @@ Thankfully, various lesser-known native features already exist to provide us wit
 
 The `TypedObject` constructor uses these features to effortlessly generate strict, strongly-typed objects, ideal for data storage and transport within large scale client-side or server-side applications.
 
-## Example
+## Examples
 
 ```js
 'use strict';
@@ -44,6 +44,19 @@ product.isOwned     = 'TRUE'; // Uncaught TypeError: Can't set property <TypedOb
 // Example bad extension:
 
 product.discount    = '0.5'; // Uncaught TypeError: Can't add property discount, object is not extensible
+
+// Example bad definition:
+
+var product = new TypedObject({
+    price: -1,
+    currency: '',
+    name: '',
+    images: [],
+    isOwned: false,
+    buy: function() { ... }
+});
+
+// Uncaught TypeError: Can't define method <TypedObject>.buy, methods are not permitted on TypedObjects
 ```
 
 ## Data Retrieval 
