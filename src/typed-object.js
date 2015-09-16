@@ -77,7 +77,7 @@
                 throw new TypeError(
                     'Can\'t define property <TypedObject>.' +
                     key +
-                    ', methods are not permitted on strict objects.'
+                    ', methods are not permitted on typed objects.'
                 );
             }
 
