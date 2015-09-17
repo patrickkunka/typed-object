@@ -6,7 +6,7 @@
     "url": "git://github.com/kunkalabs/typed-object.git"
   },
   "version": "0.0.0",
-  "description": "Creates strict, strongly-typed ES5-compatible JavaScript objects.",
+  "description": "Create strict, strongly-typed JavaScript objects.",
   "devDependencies": {
     "gulp": "^3.8.8",
     "gulp-jscs": "^1.5.1",
