@@ -2,7 +2,7 @@
 
 Create strict, strongly-typed JavaScript objects
 
-Object literials often just don't cut it for large scale JavaScript applications, and during development we may want the peace of mind that comes with strongly-typed languages, whether we're simply trying to catch typos or creatomg public APIs and interfaces.
+Object literials often just don't cut it for large scale JavaScript applications, and during development we may want the peace of mind that comes with strongly-typed languages, whether we're simply trying to catch typos or creating public APIs and interfaces.
 
 Thankfully, various lesser-known native features already exist to provide us with the ability to create much stricter constructs within vanilla ES5 JavaScript - without having to resort to higher-level abstractions such as TypeScript.
 
@@ -80,7 +80,7 @@ var product = new TypedObject({
 // Uncaught TypeError: Can't define method <TypedObject>.buy, methods are not permitted on typed objects
 ```
 
-### Full Data Retrieval 
+### Full Data Retrieval
 
 While data may be retrieved from individual properties via ES5 getters as shown in the above example, we may want to inspect the object as a whole for debugging.
 
