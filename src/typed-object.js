@@ -15,11 +15,12 @@
     /**
      * TypedObject
      * @param {Object} obj
+     * @param [{Object}] context
      * @constructor
      */
 
-    var TypedObject = function(obj) {
-        var self = this,
+    var TypedObject = function(obj, context) {
+        var self = context || this,
             dataStore = {},
             keys = Object.getOwnPropertyNames(obj),
             err = function(key, typeDest, typeSrc) {
@@ -45,7 +46,7 @@
                                 err(key, 'object', typeof value);
                             }
                         }
-                        
+
                         if (
                             typeof obj[key].length !== 'undefined' &&
                             typeof value.length === 'undefined'
