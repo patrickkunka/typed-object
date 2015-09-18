@@ -1,5 +1,5 @@
 /**!
- * TypedObject v0.0.0
+ * TypedObject v1.0.0
  *
  * @copyright Copyright 2015 KunkaLabs Limited.
  * @author    KunkaLabs
@@ -113,6 +113,12 @@
         return output;
     };
 
+    if (!window) {
+        module.exports = TypedObject;
+
+        return;
+    }
+
     if (
         typeof window.exports === 'object' &&
         typeof window.module === 'object'
@@ -131,4 +137,4 @@
     ) {
         window.TypedObject = TypedObject;
     }
-})(window);
+})(typeof window !== 'undefined' ? window : null);

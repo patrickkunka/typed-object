@@ -5,7 +5,11 @@
     "type": "git",
     "url": "git://github.com/kunkalabs/typed-object.git"
   },
-  "version": "0.0.2",
+  "license": {
+    "type": "GPLv3",
+    "url": "http://www.gnu.org/licenses/gpl-3.0.en.html"
+  },
+  "version": "1.0.0",
   "main": "src/typed-object.js",
   "description": "Create strict, strongly-typed JavaScript objects.",
   "devDependencies": {
